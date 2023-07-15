@@ -1,0 +1,336 @@
+#gallery{
+  font-family: var(--body-font);
+  margin-top: 150px;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+#background {
+  /* position: absolute;  */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s; /* add a 1s transition effect to the filter property */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background.blurred {
+  filter: blur(5px); /* add a 5px blur effect to the background */
+}
+
+.tabs {
+  font-family: 'Public Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.tabs__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+}
+
+.tabs__toggle {
+  margin: 0 5px;
+  padding: 7px 25px;
+  background: var(--first-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tabs__name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #484848;
+}
+
+.tabs__body {
+  background: #222;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 30px;
+  position: relative;
+}
+
+.tabs__title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tabs__text {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #484848;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__toggle.is-active {
+  background: #482e31;
+}
+
+.tabs__toggle.is-active .tabs__name {
+  color: #fff;
+}
+
+.tabs__content.is-active {
+  display: block;
+}
+
+/* GRID */
+
+.gallery {
+  /* margin: 100px auto 0; */
+  padding: 0 20px;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 20px;
+  justify-content: center;
+  font-family: "Public Sans", sans-serif;
+}
+
+.gallery .item {
+  /* min-height: 200px; */
+  background: crimson;
+  color: #f1f1f1;
+  /* padding: 20px; */
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 560px){
+  .tabs__head {
+    display: block;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .tabs__toggle {
+    padding: 12px 10px;
+    /* width: 250px; */
+  }
+}
+
+
+/* CHAT GPT */
+.text {
+  text-align: center;
+  padding: 27px 5px 10px 5px;
+}
+.shopping-card:hover {
+  /* transform: translateY(10px); */
+  transition: 0.5s;
+  box-shadow: 10px 2px 26px 0px rgba(0, 0, 0, 0.4);
+}
+
+.shopping-card {
+  width: 200px;
+  background-color: #181818;
+  padding: 18px 15px;
+  border-radius: 15px;
+}
+
+.shopping-card img {
+  width: 100%;
+  /* height: 50%; */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.shopping-card .product-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.shopping-card h3 {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.shopping-card .ri-information-line {
+  float: right;
+  width: 33px;
+  margin-left: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.shopping-card .price-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shopping-card p {
+  margin-right: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.shopping-card button {
+  background-color: #f29a4a;
+  border-radius: 6px;
+  font-size: 30px;
+  color: #181818;
+  padding: 1px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.shopping-card button:hover {
+  background-color: #b4753a;
+  transition: 0.2s;
+}
+
+#popup {
+  font-family: "Public Sans", sans-serif;
+  color: white;
+  padding: 0px 20px 30px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: #181818;
+  border-radius: 15px;
+}
+
+.button-popup {
+  background-color: #d8c293;
+  padding: 15px 10px;
+  color: #291f1f;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  /* box-shadow: 0px 0px 50px 10px rgba(216, 194, 147, 0.48); */
+  border-radius: 50px 0px 30px 50px;
+  cursor: pointer;
+}
+
+.button-popup:hover {
+  background-color: rgb(218, 196, 151);
+  box-shadow: 0px 0px 50px 10px rgba(216, 194, 147, 0.48);
+  /* border-radius: 50px 0px 30px 50px; */
+  transition: 0.5s;
+  cursor: pointer;
+}
+#popup p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 15px 10px 20px 10px;
+  /* margin-bottom: 10px; */
+}
+#popup a {
+  color: #291f1f;
+  text-decoration: none;
+}
+
+#popup-close {
+  position: absolute; /* position the close button at the top-right corner */
+  top: 0;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GALERY RESPONSIV */
+
+.gallery-responsive{
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  padding: 0 14px;
+}
+.gallery-responsive::after {
+  content:'';
+  display:block;
+  flex-grow: 10;
+}
+.gallery-responsive li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
+}
+.gallery-responsive img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .75rem;
+}
