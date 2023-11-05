@@ -43,7 +43,7 @@
   <body>
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="index.html" class="nav__logo">
+        <a href="index.php" class="nav__logo">
           <h1>
             <span> JOEL MATTER</span><br />
             Coutelier depuis 14 ans
@@ -54,15 +54,15 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">Accueil</a>
+              <a href="index.php" class="nav__link">Accueil</a>
             </li>
 
             <li class="nav__item">
-              <a href="page2.html" class="nav__link">Couteau</a>
+              <a href="page2.php" class="nav__link">Couteau</a>
             </li>
 
             <li class="nav__item">
-              <a href="index.html#form-contact" class="nav__link">Contact</a>
+              <a href="index.php#form-contact" class="nav__link">Contact</a>
             </li>
 
             <li class="nav__item">

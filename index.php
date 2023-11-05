@@ -22,7 +22,7 @@
 <body>
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="index.html" class="nav__logo">
+      <a href="index.php" class="nav__logo">
         <h1>
           <span> JOEL MATTER</span><br>
           Coutelier depuis 14 ans
@@ -33,19 +33,19 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="index.html" class="nav__link">Accueil</a>
+            <a href="index.php" class="nav__link">Accueil</a>
           </li>
 
           <li class="nav__item">
-            <a href="page2.html" class="nav__link">Couteau</a>
+            <a href="page2.php" class="nav__link">Couteau</a>
           </li>
 
           <li class="nav__item">
-            <a href="#form-contact" class="nav__link">Contact</a>
+            <a href="index.php#form-contact" class="nav__link">Contact</a>
           </li>
 
           <li class="nav__item">
-            <a href="about.html" class="nav__link">Atelier</a>
+            <a href="about.php" class="nav__link">Atelier</a>
           </li>
 
           <li class="nav__item">
@@ -86,7 +86,7 @@
               <span class="home__skill anime-text">CRÉATEUR DE COUTEAUX DEPUIS 2007 </span>
             </div>
             <div>
-              <a href="page2.html" class="home__button_1 anime-text">Couteau disponible </a>
+              <a href="page2.php" class="home__button_1 anime-text">Couteau disponible </a>
             </div>
           </div>
 
@@ -142,7 +142,7 @@
       </div>
     </div>
     <div class="button-1">
-      <a href="page2.html" class="home__button_2 anime-text">Voir tous les couteaux</a>
+      <a href="page2.php" class="home__button_2 anime-text">Voir tous les couteaux</a>
     </div>
 
   </section>
@@ -172,29 +172,30 @@
 <div id="trois"></div>
 
   <section id="form-contact">
-    <form action="" >
-      <div class="title">
-        <h2>ME CONTACTER</h2>
-      </div>
-      <div class="half">
-        <div class="item">
-          <label for="name">Votre Nom </label>
-          <input type="text" id = "name">
-        </div>
-        <div class="item">
-          <label for="email">Votre Email </label>
-          <input type="text" id = "email">
-        </div>
-      </div>
-      <div class="full">
-        <label for="message">Votre Message</label>
-        <textarea name="" id = "message"></textarea>
-      </div>
-      <div class="action">
-        <input type="submit" value = "Envoyer votre message">
-        <input type="reset" value = "RÉINITIALISER">
-      </div>
-    </form>
+  <form action="contact/traitement.php" method="post">
+  <div class="title">
+    <h2>ME CONTACTER</h2>
+  </div>
+  <div class="half">
+    <div class="item">
+      <label for="name">Votre Nom </label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div class="item">
+      <label for="email">Votre Email </label>
+      <input type="text" id="email" name="email">
+    </div>
+  </div>
+  <div class="full">
+    <label for="message">Votre Message</label>
+    <textarea id="message" name="message"></textarea>
+  </div>
+  <div class="action">
+    <input type="submit" value="Envoyer votre message">
+    <input type="reset" value="RÉINITIALISER">
+  </div>
+</form>
+
   </section>
   <div id="quatre"></div>
 
@@ -259,6 +260,18 @@
 </footer>
   </section>
 
+  <script>
+function validateForm() {
+  var name = document.forms["contactForm"]["name"].value;
+  var email = document.forms["contactForm"]["email"].value;
+  var message = document.forms["contactForm"]["message"].value;
+
+  if (name == "" || email == "" || message == "") {
+    alert("Veuillez remplir tous les champs obligatoires.");
+    return false;
+  }
+}
+</script>
 
   <script src="js/app.js"></script>
 </body>

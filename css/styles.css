@@ -1328,6 +1328,7 @@ form label {
 }
 
 form .half .item input {
+  color: #fff;
   border-radius: 4px;
   border: 1px solid white;
   outline: 0;
@@ -1343,6 +1344,7 @@ form .full {
 }
 
 form .full textarea {
+  color: #fff;
   background: transparent;
   border-radius: 4px;
   border: 1px solid white;
